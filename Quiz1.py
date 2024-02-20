@@ -19,31 +19,54 @@ csv_file = csv.reader(students)
 
 csv_file1 = csv.writer(outfile)
 
-for rec in csv_file:
-    outfile.write(f'{rec[0]}, {rec[2]}, {rec[3]}, {rec[6]}, {rec[7]}, {rec[8]}\n')
-
 #this will skip the first record which is the header
 next(csv_file)
-
+    
 for rec in csv_file:
     #print(rec)
-    Gpa = float(rec[8])
-    if Gpa < 3:
+    outfile.write(f'{rec[0]}, {rec[2]}, {rec[3]}, {rec[6]}, {rec[7]}, {rec[8]}\n')
+    gpa = float(rec[8])
+    rounded_gpa = round(gpa, 2)
+    if rounded_gpa < 3.0:
         outfile.write(f'{rec[0]}, {rec[2]}, {rec[3]}, {rec[6]}, {rec[7]}, {rec[8]}\n')
+
+
 
 
 outfile.close()
 
 
+import csv
 
 #create a new dictionary named 'student_dict'
+student_dict = {
 
+ 'bob  norbert':  2.70,
 
+ 'wally  kendall':  2.80,
+
+ 'roberto  morales': 2.50,
+
+ 'luke  brazzi': 2.20
+
+}
 
 #use a loop to iterate through each row of the file
 
 
+infile = open ('processedStudents.csv', 'r')
+outfile = open ('student_dict', 'w')
+
+csv_file = csv.reader(infile)
+csv_file1 = csv.writer(outfile)
+
     #check if the GPA is below 3.0. If so, write the record to the outfile
+next(csv_file)
+
+for rec in csv_file:
+    gpa = float(rec[5])
+    if gpa < 3:
+        outfile.write(f'{rec[1]} {rec[2]}, {rec[5]}\n')
     
         
 
@@ -52,10 +75,11 @@ outfile.close()
     # append the record to the dictionary with the student Full name in proper case 
     # as the Key and the value as the GPA
     
+print (student_dict)
+print (student_dict['luke  brazzi'])
 
 
-
-
+outfile.close()
 
 #print the entire dictionary
 

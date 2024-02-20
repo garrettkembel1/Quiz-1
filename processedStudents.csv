@@ -1,12 +1,15 @@
-stud_id, firstname, lastname, major, classification, gpa
 123456789, homer, wells, mis, fr, 3.00
 124567890, bob, norbert, fin, jr, 2.70
+124567890, bob, norbert, fin, jr, 2.70
 234567890, candy, kendall, acct, jr, 3.50
+345678901, wally, kendall, mis, sr, 2.80
 345678901, wally, kendall, mis, sr, 2.80
 456789012, joe, estrada, fin, sr, 3.20
 567890123, mariah, dodge, mis, jr, 3.60
 678901234, tess, dodge, acct, so, 3.30
 789012345, roberto, morales, fin, jr, 2.50
+789012345, roberto, morales, fin, jr, 2.50
 876543210, cristopher, colan, mis, sr, 4.00
+890123456, luke, brazzi, mis, sr, 2.20
 890123456, luke, brazzi, mis, sr, 2.20
 901234567, william, pilgram, mis, so, 3.80
